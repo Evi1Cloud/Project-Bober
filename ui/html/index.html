@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri Clicker</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>    
+        img {
+            user-select: none; /* Запретить выделение */
+            -webkit-user-select: none; /* Для Safari */
+            -moz-user-select: none; /* Для Firefox */
+            -ms-user-select: none; /* Для Internet Explorer/Edge */
+            -webkit-user-drag: none; /* Запретить перетаскивание для WebKit */
+            -user-drag: none; /* Запретить перетаскивание для других браузеров */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Меню</h2>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#games">Игры</a></li>
+            <li><a href="#leaderboard">Рейтинг</a></li>
+            <li><a href="#contact">Контакты</a></li>
+            <li><a href="/login">Вход</a></li>
+           {{if .Username}}
+            <a>Добро пожаловать, {{.Username}}!</a>
+        {{else}}
+             <li><a href="/register">Регистрация</a></li>
+        {{end}}
+        </ul>
+    </div>
+    
+    <div class="content">
+        <img src="../static/img/sticker.png" alt="Cow" id="cow" onclick="incrementScore()" draggable="false">
+        <h2>Счет: <span id="score">0</span></h2>
+        
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

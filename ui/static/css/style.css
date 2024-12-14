@@ -1,0 +1,80 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+     background-color: #f0f8ff;
+    /*background-image: url('../img/pig.png'); /* Путь к изображению */
+    background-size: cover; /* Изображение будет покрывать весь фон */
+    background-repeat: no-repeat; /* Изображение не будет повторяться */
+    background-position: center; /* Центрировать изображение */ 
+}
+
+.content {
+    position: relative; /* Устанавливаем контекст для абсолютного позиционирования */
+    flex-grow: 1; /* Позволяем контенту занимать оставшееся пространство */
+    display: flex; /* Используем Flexbox */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+    height: 100vh; /* Высота контейнера на весь экран */
+    margin-left: 20px; /* Отступ для основного контента */
+}
+
+#cow {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 20px; /* Отступ снизу для изображения */
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 100px;
+    background-color: #f0f0f0; /* Светлый фон */
+    color: #333; /* Темный текст */
+    padding: 20px;
+    height: 100vh; /* Высота на весь экран */
+    border-right: 1px solid #ccc; /* Разделительная линия */
+}
+
+
+.divider {
+    height: 5px; /* Высота разделителя */
+    background-color: #ccc; /* Цвет разделителя */
+    margin: 10px 0; /* Отступы сверху и снизу */
+}
+menu-content {
+    padding-top: 10px; /* Отступ сверху для содержимого меню */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #333; /* Темный текст */
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ddd; /* Цвет фона при наведении */
+
+}
